@@ -23,23 +23,6 @@ function DNAtoRNA(dna) {
 // https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
 
 var min = function(list){
-    list.sort(compareMin);
-    return list[0];
-}
-function compareMin(a, b) {
-  return a - b;
-}
-var max = function(list){
-    list.sort(compareMax);
-    return list[0];
-}
-function compareMax(a, b) {
-  return b - a;
-}
-
-// https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
-
-var min = function(list){
     list.sort( (a, b) =>  a - b );
     return list[0];
 }
@@ -48,6 +31,9 @@ var max = function(list){
     list.sort( (a, b) =>  b - a );
     return list[0];
 }
+
+// https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
+
 
 // Поглиблені задачки (робити за бажанням):
 // https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript
