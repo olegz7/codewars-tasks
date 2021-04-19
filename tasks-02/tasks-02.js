@@ -58,9 +58,7 @@ function warnTheSheep(queue) {
 // https://www.codewars.com/kata/beginner-lost-without-a-map
 
 function maps(x) {
-    return x.map(function (num) {
-        return num * 2;
-    });
+    return x.map(num => num * 2);
 }
 
 
