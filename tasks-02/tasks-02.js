@@ -71,6 +71,13 @@ function warnTheSheep(queue) {
 
 // https://www.codewars.com/kata/beginner-lost-without-a-map
 
+function maps(x) {
+    return x.map(function (num) {
+        return num * 2;
+    });
+}
+
 
 // https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
+
 
