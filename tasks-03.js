@@ -56,8 +56,8 @@ class Dog extends Animal {
 // https://www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
 
 function giveMeFive(obj) {
-    let arr = [];
-    for (let key in obj) {
+    const arr = [];
+    for (const key in obj) {
         if (key.length === 5) {
             arr.push(key);
         }
@@ -67,3 +67,8 @@ function giveMeFive(obj) {
     }
     return arr;
 }
+
+
+
+
+
