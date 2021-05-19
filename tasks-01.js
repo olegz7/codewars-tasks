@@ -11,6 +11,13 @@ function move(position, roll) {
     return position + roll * 2;
 }
 
+function move(position, roll) {
+    if (roll < 1 || roll > 6) {
+        throw new Error("roll should be in range from 1 to 6");
+    }
+    return position + roll * 2;
+}
+
 
 // https://www.codewars.com/kata/grasshopper-personalized-message/train/javascript
 
@@ -21,6 +28,9 @@ function greet(name, owner) {
     return "Hello guest";
 }
 
+function greet(name, owner) {
+    return `Hello ${name === owner ? "boss" : "guest"}`
+}
 
 // https://www.codewars.com/kata/keep-hydrated-1/train/javascript
 
