@@ -77,6 +77,16 @@ function warnTheSheep(queue) {
     }
 }
 
+// --- more elegant way --- 
+
+// [...queue] - creates copy of queue array and do not modify it with reverse()
+
+function warnTheSheep(queue) {
+    const wolfPosition = [...queue].reverse().indexOf("wolf");
+    return wolfPosition === 0
+        ? "Pls go away and stop eating my sheep"
+        : `Oi! Sheep number ${wolfPosition}! You are about to be eaten by a wolf!`;
+}
 
 // https://www.codewars.com/kata/beginner-lost-without-a-map
 
@@ -84,7 +94,13 @@ function maps(x) {
     return x.map(num => num * 2);
 }
 
-
 // https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
 
-
+function firstNonConsecutive(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i + 1] - arr[i] !== 1) {
+            return arr[i + 1];
+        }
+    }
+    return null;
+}
