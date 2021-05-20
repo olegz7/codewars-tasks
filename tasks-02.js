@@ -97,6 +97,7 @@ function maps(x) {
 // https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
 
 function firstNonConsecutive(arr) {
+    // "use strict" - strict mode that checks that variables (i) in function written with "let", are not global and will not spoil code outside the function
     for (let i = 0; i < arr.length; i++) {
         if (arr[i + 1] - arr[i] !== 1) {
             return arr[i + 1];
