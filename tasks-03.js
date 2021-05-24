@@ -12,6 +12,15 @@ function circleCircumference(circle) {
     return 2 * Math.PI * circle["radius"];
 }
 
+// --- Стрілочна функція ---
+const circleCircumference = circle => 2 * Math.PI * circle.radius;
+
+// --- Деструктуризація ---
+function circleCircumference(circle) {
+    const = { radius, center } = circle; // можна виводити декілька значень з об'єкту одразу
+    return 2 * Math.PI * radius;
+}
+
 // https://www.codewars.com/kata/fun-with-es6-classes-number-2-animals-and-inheritance/train/javascript
 
 class Shark extends Animal {
@@ -43,19 +52,41 @@ class Dog extends Animal {
 // https://www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
 
 function giveMeFive(obj) {
-    const arr = [];
+    const superArray = [];
     for (const key in obj) {
         if (key.length === 5) {
-            arr.push(key);
+            superArray.push(key);
         }
         if (obj[key].length === 5) {
-            arr.push(obj[key]);
+            superArray.push(obj[key]);
         }
     }
-    return arr;
+    return superArray;
 }
 
+// https://www.codewars.com/kata/understanding-closures-the-basics/train/javascript
 
+function buildFun(n) {
+    var res = [];
+    for (let i = 0; i < n; i++) {
+        res.push(function () {
+            return i;
+        });
+    }
+    return res;
+}
 
+// --- a little bit old school way --- 
 
+function buildFun(n) {
+    var res = [];
+    for (var i = 0; i < n; i++) {
+        (function (value) {
+            res.push(function () {
+                return value;
+            });
+        })(i);
+    }
+    return res;
+}
 
