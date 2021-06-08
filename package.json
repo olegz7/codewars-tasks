@@ -1,0 +1,24 @@
+{
+  "name": "codewars-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tasks-01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olegz7/codewars-tasks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olegz7/codewars-tasks/issues"
+  },
+  "homepage": "https://github.com/olegz7/codewars-tasks#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}

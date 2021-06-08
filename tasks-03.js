@@ -23,6 +23,19 @@ function circleCircumference(circle) {
 
 // https://www.codewars.com/kata/fun-with-es6-classes-number-2-animals-and-inheritance/train/javascript
 
+class Animal {
+  constructor(name, age, legs, species, status) {
+    this.name = name;
+    this.age = age;
+    this.legs = legs;
+    this.species = species;
+    this.status = status;
+  }
+  introduce() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  }
+}
+
 class Shark extends Animal {
     constructor(name, age, status) {
         super(name, age, 0, "shark", status);
@@ -47,6 +60,10 @@ class Dog extends Animal {
         return `Hello ${this.master}`;
     }
 }
+
+const billy = new Shark("Billy", 3, "Alive and well");
+const spitsy = new Cat("Spitsy", 6, "sleeping");
+const doug = new Dog("Doug", 12, "Serving his master", "Eliza");
 
 
 // https://www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
